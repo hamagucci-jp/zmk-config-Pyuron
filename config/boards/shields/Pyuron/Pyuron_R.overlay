@@ -40,7 +40,7 @@
     status = "okay";
     device = <&trackball_R>;
     /* ここに以下の1行を追加します */
-        input-processors = <&zip_temp_layer 3 500>;
+        input-processors = <&zip_temp_layer 7 500>;
     };
 
 &spi0 {
