@@ -5,7 +5,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <input/processors.dtsi>
 
-/* マウスレイヤーの定義 */
 #define MOUSE 6
 
 &mt {
@@ -26,14 +25,12 @@
     };
 
     behaviors {
-        /* オートマウスの設定 */
         zip_temp_layer: zip_temp_layer {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
             excluded-positions = <>; 
         };
 
-        /* レイヤータップの設定 */
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -100,7 +97,7 @@
             >;
         };
 
-        MOUSE_LAYER {
+        layer_6 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
