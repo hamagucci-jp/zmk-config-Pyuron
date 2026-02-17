@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
 #define MOUSE 6
 
 &mt {
@@ -30,12 +31,9 @@
             tapping-term-ms = <200>;
         };
         behaviors {
-            // ここを追加：マウスを動かした時に一時的にレイヤーを切り替える定義
             zip_temp_layer: zip_temp_layer {
                 compatible = "zmk,input-processor-temp-layer";
                 #input-processor-cells = <2>;
-                // マウスレイヤー（例：3番）にいる時、レイヤーが勝手に閉じないキー番号を指定
-                // ひとまず空でも動きますが、クリックキーなどの番号を書くと安定します
                 excluded-positions = <>; 
             };
         };
