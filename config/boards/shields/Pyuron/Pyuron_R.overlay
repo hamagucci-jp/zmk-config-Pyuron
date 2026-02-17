@@ -2,6 +2,16 @@
 #include <input/processors.dtsi>
 #include "Pyuron.dtsi"
 
+/ {
+    behaviors {
+        zip_temp_layer: zip_temp_layer {
+            compatible = "zmk,input-processor-temp-layer";
+            #input-processor-cells = <2>;
+            excluded-positions = <>; 
+        };
+    };
+};
+
 &default_transform {
     col-offset = <6>;
 };
