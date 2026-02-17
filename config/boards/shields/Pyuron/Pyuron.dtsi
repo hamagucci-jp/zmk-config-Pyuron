@@ -115,4 +115,12 @@ split_inputs {
             , <&key_physical_attrs 100 100 1200  300       0     0     0>
             ;
     };
+
+    behaviors {
+        zip_temp_layer: zip_temp_layer {
+            compatible = "zmk,input-processor-temp-layer";
+            #input-processor-cells = <2>;
+            excluded-positions = <>; 
+        };
+    };
 };
