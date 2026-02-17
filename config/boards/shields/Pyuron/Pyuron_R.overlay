@@ -9,8 +9,14 @@
             #input-processor-cells = <2>;
             excluded-positions = <>; 
         };
+        lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
-};
 
 &default_transform {
     col-offset = <6>;
@@ -73,4 +79,5 @@
         y-input-code = <INPUT_REL_Y>;
         force-awake;
     };
+};
 };
