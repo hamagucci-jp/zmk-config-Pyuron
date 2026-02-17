@@ -13,7 +13,6 @@
 };
 
 / {
-
     combos { compatible = "zmk,combos"; };
 
     macros {
