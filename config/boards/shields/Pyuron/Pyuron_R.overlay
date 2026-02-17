@@ -40,9 +40,8 @@
 &trackball_listener_R {
     status = "okay";
     device = <&trackball_R>;
-    /* ここに以下の1行を追加します */
-        input-processors = <&zip_temp_layer 7 500>;
-    };
+    input-processors = <&zip_temp_layer 6 500>;
+};
 
 &spi0 {
     status = "okay";
