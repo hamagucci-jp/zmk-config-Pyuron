@@ -4,6 +4,10 @@
 #include <dt-bindings/zmk/pointing.h>
 #define MOUSE 6
 
+&trackball_listener {
+    input-processors = <&zip_temp_layer 6 10000>;
+};
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
