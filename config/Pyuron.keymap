@@ -8,6 +8,10 @@
     input-processors = <&zip_temp_layer 6 10000>;
 };
 
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 6 250>;
+};
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
