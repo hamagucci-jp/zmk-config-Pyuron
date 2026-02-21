@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include "Pyuron.dtsi"
 
-&zip_temp_layer {
+&zip_temp_layer {//2026-02-21
     excluded-positions = <
         18 // J
         19 // K
@@ -51,7 +51,15 @@
 &trackball_listener_R {
     status = "okay";
     device = <&trackball_R>;
-    input-processors = <&zip_temp_layer 5 10000>;
+};
+
+/ {
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball_R>;
+
+        input-processors = <&zip_temp_layer 5 10000>;
+    };
 };
 
 &spi0 {
