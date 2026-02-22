@@ -1,14 +1,21 @@
-#include <input/processors.dtsi>//2026-02-22
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
 
-#define MOUSE 6
+/* レイヤー番号を明示的に定義 */
+#define DEFAULT 0
+#define L1      1
+#define L2      2
+#define L3      3
+#define L4      4
+#define L5      5
+#define MOUSE_L 6
 
-&trackball_listener { input-processors = <&zip_temp_layer 6 10000>; };
-
-&mkp_input_listener { input-processors = <&zip_temp_layer 6 250>; };
+/* トラックボールのリスナー設定（ラベル名をMOUSE_Lに変更） */
+&trackball_listener { input-processors = <&zip_temp_layer MOUSE_L 10000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer MOUSE_L 250>; };
 
 &mt {
     flavor = "balanced";
@@ -23,10 +30,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W      &kp E      &kp R         &kp T           &kp Y        &kp U          &kp I        &kp O          &kp P
-&kp A             &kp S      &kp D      &kp F         &kp G           &kp H        &kp J          &kp K        &kp L          &kp SQT
-&mt LEFT_SHIFT Z  &kp X      &kp C      &kp V         &kp B           &lt 4 COLON  &kp SEMICOLON  &kp N        &kp M          &kp COMMA
-&kp DOT           &kp SLASH  &kp LCTRL  &kp LEFT_WIN  &lt 2 LEFT_ALT  &lt 3 SPACE  &kp BACKSPACE  &lt 1 ENTER  &kp RIGHT_ALT  &kp DEL
+&kp Q             &kp W          &kp E          &kp R          &kp T                             &kp Y          &kp U          &kp I          &kp O          &kp P
+&kp A             &kp S          &kp D          &kp F          &kp G                             &kp H          &kp J          &kp K          &kp L          &kp SQT
+&mt LEFT_SHIFT Z  &kp X          &kp C          &kp V          &kp B           &lt 4 COLON       &kp SEMICOLON  &kp N          &kp M          &kp COMMA
+&kp DOT           &kp SLASH      &kp LCTRL      &kp LEFT_WIN   &lt 2 LEFT_ALT  &lt 3 SPACE       &kp BACKSPACE  &lt 1 ENTER    &kp RIGHT_ALT  &kp DEL
             >;
         };
 
@@ -75,7 +82,7 @@
             >;
         };
 
-        MOUSE {
+        layer_6 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
