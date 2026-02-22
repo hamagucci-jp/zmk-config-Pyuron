@@ -11,11 +11,11 @@
 #define L3      3
 #define L4      4
 #define L5      5
-#define MOUSE_L 6
+#define MOUSE_R 6
 
 /* トラックボールのリスナー設定（ラベル名をMOUSE_Lに変更） */
-&trackball_listener { input-processors = <&zip_temp_layer MOUSE_L 10000>; };
-&mkp_input_listener { input-processors = <&zip_temp_layer MOUSE_L 250>; };
+&trackball_listener_R { input-processors = <&zip_temp_layer MOUSE_R 10000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer MOUSE_R 250>; };
 
 &mt {
     flavor = "balanced";
