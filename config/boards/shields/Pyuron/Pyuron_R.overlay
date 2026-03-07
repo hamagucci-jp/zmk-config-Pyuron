@@ -1,5 +1,6 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include "Pyuron.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -38,7 +39,9 @@
 
 &trackball_listener_R {
     status = "okay";
+    compatible = "zmk,input-listener";
     device = <&trackball_R>;
+    input-processors = <&zip_temp_layer 5 10000>;
 };
 
 &spi0 {
@@ -61,4 +64,12 @@
         y-input-code = <INPUT_REL_Y>;
         force-awake;
     };
+};
+
+&zip_temp_layer {
+    excluded-positions = <
+        16 // J
+        17 // K
+        18 // l
+    >;
 };
