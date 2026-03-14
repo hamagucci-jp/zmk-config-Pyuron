@@ -41,12 +41,12 @@
 
         l_click {
             bindings = <&mkp LCLK>;
-            key-positions = <15>;
+            key-positions = <16>;
         };
 
         r_click {
             bindings = <&mkp RCLK>;
-            key-positions = <17>;
+            key-positions = <18>;
         };
     };
 
