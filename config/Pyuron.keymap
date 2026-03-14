@@ -41,12 +41,12 @@
 
         l_click {
             bindings = <&mkp LCLK>;
-            key-positions = <16 17>;
+            //key-positions = <16 17>;
         };
 
         r_click {
             bindings = <&mkp RCLK>;
-            key-positions = <17 18>;
+            //key-positions = <17 18>;
         };
     };
 
@@ -170,7 +170,7 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp_exit_AML LCLK  &mkp_exit_AML RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &mkp_exit_AML LCLK  &trans  &mkp_exit_AML RCLK  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans              &trans  &trans
             >;
